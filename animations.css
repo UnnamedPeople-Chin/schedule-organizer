@@ -1,0 +1,422 @@
+/* ============================================================
+   SCHEDULE ORGANIZER — COMPREHENSIVE ANIMATIONS
+   ============================================================ */
+
+/* ──────────────────────────────────────────────
+   1. BASE KEYFRAMES
+   ────────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.88); }
+    to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideOutRight {
+    from { opacity: 1; transform: translateX(0); }
+    to   { opacity: 0; transform: translateX(40px); }
+}
+@keyframes slideOutLeft {
+    from { opacity: 1; transform: translateX(0); }
+    to   { opacity: 0; transform: translateX(-40px); }
+}
+@keyframes overlayFadeIn {
+    from { opacity: 0; backdrop-filter: blur(0px); }
+    to   { opacity: 1; backdrop-filter: blur(8px); }
+}
+@keyframes modalPop {
+    0%   { opacity: 0; transform: scale(0.88) translateY(24px); }
+    70%  { opacity: 1; transform: scale(1.02) translateY(-2px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes modalDismiss {
+    from { opacity: 1; transform: scale(1) translateY(0); }
+    to   { opacity: 0; transform: scale(0.9) translateY(16px); }
+}
+@keyframes overlayFadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4); }
+    50%       { transform: scale(1.02); box-shadow: 0 0 0 6px rgba(234, 88, 12, 0); }
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    15%       { transform: translateX(-6px); }
+    30%       { transform: translateX(5px); }
+    45%       { transform: translateX(-4px); }
+    60%       { transform: translateX(3px); }
+    75%       { transform: translateX(-2px); }
+    90%       { transform: translateX(1px); }
+}
+@keyframes datePulse {
+    0%   { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.5); }
+    60%  { box-shadow: 0 0 0 8px rgba(13, 148, 136, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+}
+@keyframes calSlideLeft {
+    from { opacity: 0; transform: translateX(-32px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes calSlideRight {
+    from { opacity: 0; transform: translateX(32px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes filterFade {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes countUpFlash {
+    0%   { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ──────────────────────────────────────────────
+   2. AUTH / LANDING PAGE
+   ────────────────────────────────────────────── */
+
+/* Sidebar logo + hero text — staggered fade-slide-up */
+.auth-sidebar-header {
+    animation: fadeSlideUp 0.6s ease both;
+    animation-delay: 0.05s;
+}
+.auth-sidebar-hero {
+    animation: fadeSlideUp 0.65s ease both;
+    animation-delay: 0.18s;
+}
+.auth-sidebar-illustration-box {
+    animation: fadeSlideUp 0.7s ease both;
+    animation-delay: 0.32s;
+}
+
+/* Feature cards — staggered */
+.auth-sidebar-features .auth-feature-item:nth-child(1) {
+    animation: fadeSlideUp 0.6s ease both;
+    animation-delay: 0.45s;
+}
+.auth-sidebar-features .auth-feature-item:nth-child(2) {
+    animation: fadeSlideUp 0.6s ease both;
+    animation-delay: 0.58s;
+}
+.auth-sidebar-features .auth-feature-item:nth-child(3) {
+    animation: fadeSlideUp 0.6s ease both;
+    animation-delay: 0.71s;
+}
+
+/* Auth card panel */
+.auth-content .auth-card {
+    animation: fadeSlideUp 0.65s ease both;
+    animation-delay: 0.15s;
+}
+
+/* Auth feature item hover */
+.auth-feature-item {
+    transition: transform 0.25s ease, background 0.25s ease;
+    border-radius: 10px;
+    padding: 6px 8px;
+}
+.auth-feature-item:hover {
+    transform: translateX(6px);
+    background: rgba(255,255,255,0.08);
+}
+
+/* ──────────────────────────────────────────────
+   3. FORM SWITCH (Masuk ↔ Daftar Akun)
+   ────────────────────────────────────────────── */
+.auth-form-wrapper {
+    transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.auth-form-wrapper.sliding-out-left {
+    animation: slideOutLeft 0.25s ease forwards;
+}
+.auth-form-wrapper.sliding-out-right {
+    animation: slideOutRight 0.25s ease forwards;
+}
+.auth-form-wrapper.sliding-in-right {
+    animation: slideInRight 0.3s ease both;
+}
+.auth-form-wrapper.sliding-in-left {
+    animation: slideInLeft 0.3s ease both;
+}
+
+/* ──────────────────────────────────────────────
+   4. MODAL — OPEN / CLOSE
+   ────────────────────────────────────────────── */
+.modal-overlay {
+    animation: overlayFadeIn 0.3s ease both;
+}
+.modal-overlay.closing {
+    animation: overlayFadeOut 0.25s ease forwards;
+    pointer-events: none;
+}
+.modal-overlay.closing .modal-box {
+    animation: modalDismiss 0.25s ease forwards;
+}
+
+/* Override existing modal-box pop for crisper feel */
+.modal-overlay .modal-box {
+    animation: modalPop 0.4s cubic-bezier(0.34, 1.46, 0.64, 1) both;
+}
+
+/* ──────────────────────────────────────────────
+   5. DASHBOARD / AGENDA CARDS
+   ────────────────────────────────────────────── */
+
+/* Cards animate in via JS adding .anim-visible */
+.agenda-card-anim {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.agenda-card-anim.anim-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Filter chips transition */
+.filter-chip, .filter-pill, .tab-btn, .hari-filter-btn {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.filter-chip:hover, .filter-pill:hover, .tab-btn:hover, .hari-filter-btn:hover {
+    transform: translateY(-1px);
+}
+.filter-chip:active, .filter-pill:active {
+    transform: scale(0.95);
+}
+
+/* Filtered content fade */
+.filter-content-fade {
+    animation: filterFade 0.3s ease both;
+}
+
+/* ──────────────────────────────────────────────
+   6. WEEKLY CALENDAR — PREV/NEXT SLIDE
+   ────────────────────────────────────────────── */
+.calendar-slide-left {
+    animation: calSlideLeft 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+.calendar-slide-right {
+    animation: calSlideRight 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+/* Selected date pulse */
+.date-selected-pulse {
+    animation: datePulse 0.6s ease-out;
+}
+
+/* Calendar day cell hover */
+.hari-item, .day-col, [class*="day-cell"] {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* ──────────────────────────────────────────────
+   7. CLASH / CONFLICT WARNING
+   ────────────────────────────────────────────── */
+.clash-warning-shake {
+    animation: shake 0.55s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.clash-box-new, .clash-header-warning {
+    animation: pulse 2.4s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+
+/* ──────────────────────────────────────────────
+   8. STAT COUNT-UP
+   ────────────────────────────────────────────── */
+.stat-count-anim {
+    display: inline-block;
+    animation: countUpFlash 0.4s ease both;
+}
+
+/* ──────────────────────────────────────────────
+   9. HOVER & MICRO-INTERACTIONS
+   ────────────────────────────────────────────── */
+
+/* Primary create button */
+.btn-create-agenda {
+    transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.25s ease,
+                background-color 0.25s ease !important;
+}
+.btn-create-agenda:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.35) !important;
+}
+.btn-create-agenda:active {
+    transform: scale(0.96) !important;
+}
+
+/* Color category buttons */
+.category-color-btn, .color-swatch {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.category-color-btn:hover, .color-swatch:hover {
+    transform: scale(1.15);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+}
+
+/* All event/todo cards */
+.event-card, .todo-item, .agenda-card, .agenda-item, .summary-stat-item {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.event-card:hover, .todo-item:hover, .agenda-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Sidebar tabs */
+.sidebar-tab {
+    transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+.sidebar-tab:hover {
+    transform: translateX(5px);
+}
+
+/* Modal solid / outline buttons */
+.btn-modal-solid, .btn-modal-outline, .btn-primary, .btn-secondary {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+.btn-modal-solid:hover, .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13,148,136,0.3);
+}
+.btn-modal-outline:hover, .btn-secondary:hover {
+    transform: translateY(-2px);
+}
+.btn-modal-solid:active, .btn-primary:active,
+.btn-modal-outline:active, .btn-secondary:active {
+    transform: scale(0.96);
+}
+
+/* Step indicator dots */
+.step-dot {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Input focus lift */
+.auth-input-wrapper, .form-group-custom input, .form-group-custom select {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.auth-input-wrapper:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(13, 148, 136, 0.15);
+}
+
+/* Profile avatar */
+#header-avatar-container {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+#header-avatar-container:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(13,148,136,0.25);
+}
+
+/* ──────────────────────────────────────────────
+   10. SCROLL-TRIGGERED  (via .anim-ready class)
+   ────────────────────────────────────────────── */
+.anim-ready {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.anim-ready.anim-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ──────────────────────────────────────────────
+   11. PAGE TRANSITIONS (TAB SWITCH)
+   ────────────────────────────────────────────── */
+.page-fade-out {
+    animation: fadeOutSlide 0.15s ease forwards;
+}
+.page-fade-in {
+    animation: fadeInSlide 0.3s ease forwards;
+}
+
+@keyframes fadeOutSlide {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-10px); }
+}
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ──────────────────────────────────────────────
+   12. STAGGERED CASCADE LOAD
+   ────────────────────────────────────────────── */
+.stagger-item {
+    opacity: 0;
+    animation: fadeSlideUp 0.5s ease forwards;
+}
+
+/* ──────────────────────────────────────────────
+   13. RIPPLE EFFECT
+   ────────────────────────────────────────────── */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleAnim 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    pointer-events: none;
+}
+.btn-outline .ripple-effect, .btn-secondary .ripple-effect, .btn-modal-outline .ripple-effect {
+    background-color: rgba(13, 148, 136, 0.2);
+}
+@keyframes rippleAnim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ──────────────────────────────────────────────
+   14. CHECKBOX SATISFYING ANIMATION
+   ────────────────────────────────────────────── */
+.animating-check {
+    animation: popCheck 0.4s cubic-bezier(0.34, 1.46, 0.64, 1) forwards;
+}
+@keyframes popCheck {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.todo-title {
+    position: relative;
+    display: inline-block;
+}
+
+.completed-anim .todo-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1.5px;
+    background-color: var(--text-secondary);
+    animation: strikethroughAnim 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+@keyframes strikethroughAnim {
+    from { width: 0; }
+    to { width: 100%; }
+}
