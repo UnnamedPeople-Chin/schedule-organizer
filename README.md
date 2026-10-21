@@ -16,6 +16,7 @@
     <a href="https://schedule-organizer-3a878.web.app"><strong>Explore Live Demo »</strong></a>
     <br />
     <br />
+    <a href="#-demo-video">Demo Video</a> •
     <a href="#-key-features">Key Features</a> •
     <a href="#-visual-previews">Visual Previews</a> •
     <a href="#-tech-stack--architecture">Tech Stack</a> •
@@ -31,6 +32,16 @@
 ## 📌 Executive Summary
 
 **Schedule Organizer** is a modern personal productivity suite developed as a flagship project for the **Desain UI/UX** course. It bridges seamless user experience design with robust real-time cloud capabilities. Users can effortlessly plan, schedule, categorize, and monitor daily tasks, deadlines, and meetings through a fluid, clutter-free user interface.
+
+---
+
+## 🎬 Demo Video
+
+<p align="center">
+  <a href="assets/demo-16x9.mp4"><img src="assets/demo-poster.webp" alt="Schedule Organizer demo reel" width="100%" style="border-radius: 8px;" /></a>
+</p>
+
+<p align="center"><em>30-second product reel — the problem, the app, and the three scheduling views in one pass. Click the frame to play.</em></p>
 
 ---
 
@@ -123,7 +134,9 @@ graph TD
 ## 📂 Project Structure
 
 ```text
-├── assets/                          # Static branding, logo, and illustration assets
+├── assets/                          # Static branding, logo, and media assets
+│   ├── demo-16x9.mp4                # 30s demo reel shown in the README
+│   ├── demo-poster.webp             # Poster frame for the reel
 │   ├── auth_illustration.png
 │   ├── avatar.png
 │   └── logo.png
