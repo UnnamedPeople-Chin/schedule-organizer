@@ -38,10 +38,10 @@
 ## 🎬 Demo Video
 
 <p align="center">
-  <a href="assets/demo-16x9.mp4"><img src="assets/demo-poster.webp" alt="Schedule Organizer demo reel" width="100%" style="border-radius: 8px;" /></a>
+  <a href="https://cdn.jsdelivr.net/gh/UnnamedPeople-Chin/schedule-organizer@main/assets/demo-16x9.mp4"><img src="assets/demo-poster.webp" alt="Schedule Organizer demo reel" width="100%" style="border-radius: 8px;" /></a>
 </p>
 
-<p align="center"><em>30-second product reel — the problem, the app, and the three scheduling views in one pass. Click the frame to play.</em></p>
+<p align="center"><em>30-second product reel — the problem, the app, and the three scheduling views in one pass. Click the frame to play, or <a href="https://cdn.jsdelivr.net/gh/UnnamedPeople-Chin/schedule-organizer@main/assets/demo-16x9.mp4">open the MP4</a>.</em></p>
 
 ---
 
