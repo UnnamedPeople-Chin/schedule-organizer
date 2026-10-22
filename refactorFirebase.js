@@ -8,7 +8,7 @@ const firebaseInit = `
 // FIREBASE INITIALIZATION
 // ==========================================
 const firebaseConfig = {
-  apiKey: "AIzaSyDDXyzABC123DEF456GHI789JKL012MNO",
+  apiKey: "AIzaSyCPVSU0OANv9kvMDF0fh3_Y-5_utT82iHE",
   authDomain: "schedule-organizer-3a878.firebaseapp.com",
   projectId: "schedule-organizer-3a878",
   storageBucket: "schedule-organizer-3a878.firebasestorage.app",
