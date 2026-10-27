@@ -187,12 +187,29 @@ firebase deploy
 
 ---
 
-## 👥 Team & Credits
+## 👥 Team & Contributors
 
 This project was designed and engineered with passion by **Kelompok 4** for the **Desain UI/UX** course:
 
-- **Jizdan Yuflikh Rachmat** ([@UnnamedPeople-Chin](https://github.com/UnnamedPeople-Chin))
-- **Team Members of Kelompok 4**
+<table>
+  <tr>
+    <td align="center" width="150px">
+      <a href="https://github.com/UnnamedPeople-Chin">
+        <img src="https://github.com/UnnamedPeople-Chin.png?size=100" width="100px;" alt="Jizdan Yuflikh Rachmat" style="border-radius: 50%;" /><br />
+        <sub><b>Jizdan Yuflikh Rachmat</b></sub>
+      </a><br />
+      <sub>Lead Developer & Designer</sub>
+    </td>
+    <td align="center" width="150px">
+      <a href="https://github.com/kfknfs">
+        <img src="https://github.com/kfknfs.png?size=100" width="100px;" alt="Kafka Nafisa" style="border-radius: 50%;" /><br />
+        <sub><b>Kafka Nafisa</b></sub>
+      </a><br />
+      <sub>Contributor & Designer</sub>
+    </td>
+  </tr>
+</table>
+
 - **Lecturer / Mentor**: Mr. Seno
 
 ---
