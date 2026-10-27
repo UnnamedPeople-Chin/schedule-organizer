@@ -207,6 +207,13 @@ This project was designed and engineered with passion by **Kelompok 4** for the 
       </a><br />
       <sub>Contributor & Designer</sub>
     </td>
+    <td align="center" width="150px">
+      <a href="https://github.com/anisaaulia">
+        <img src="https://github.com/anisaaulia.png?size=100" width="100px;" alt="Anisa Aulia" style="border-radius: 50%;" /><br />
+        <sub><b>Anisa Aulia</b></sub>
+      </a><br />
+      <sub>Contributor & Designer</sub>
+    </td>
   </tr>
 </table>
 
